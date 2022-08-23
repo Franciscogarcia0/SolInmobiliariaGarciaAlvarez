@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades en venta</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <img src="./img/Logosol2.png" alt="Logo SOL INMOBILIARIA">
+        <div class="logos">
+                <img src="./img/logomail2.png" alt="Logo Mail" class="logoMail">
+                <img src="./img/logoinsta2.jpg" alt="Logo Instagram" class="logoInsta">
+                <img src="./img/logoface2.png" alt="Logo Facebook" class="logoFace">
+                <img src="./img/logowpp.jpg" alt="Logo Whatsapp" class="logoWpp">
+        </div>
+        <div>
+            <form action="#">
+                <input type="text" placeholder="¿Que estas buscando?" class="barraBuscar"> <input type="submit" value="Buscar" class="botonBuscar"> 
+            </form>
+        </div>
+            <div class="navegador"> 
+                    <ul>
+                        <a href="index.html">HOME</a>
+                        <a href="acercade.html">SOBRE NOSOTROS</a>
+                        <a href="alquileres.html">ALQUILAR</a>
+                        <a href="comprar.html">COMPRAR</a>
+                        <a href="ventas.html">VENDER</a>
+                    </ul>
+            </div>           
+            <h1>PROPIEDADES DISPONIBLES EN VENTA</h1>
+            <form>
+                <div class="buscInterno">
+                    <div>
+                        <label for="name">Tipo de operacion</label>
+                        <select>
+                            <option value="A"> Alquilar</option>
+                            <option value="C"> Comprar</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="name">Tipo de propiedad</label> 
+                        <select>
+                            <option value="C"> Casa</option>
+                            <option value="D"> Departamento</option>
+                            <option value="L"> Locales</option>
+                            <option value="T"> Terrenos</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="name">Localidad</label>
+                        <select>
+                            <option value="C"> Cipolletti</option>
+                            <option value="N"> Neuquen</option>
+                            <option value="FO"> Fernandez Oro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="name">Cantidad de ambientes</label>
+                        <select>
+                            <option value="1"> 1</option>
+                            <option value="2"> 2</option>
+                            <option value="3"> 3</option>
+                            <option value="4"> 4</option>
+                            <option value="5"> 5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="name">Rango de precio</label>
+                        <input type="range" min="10000" max="1000000">
+                    </div>
+                    <div>
+                        <input type="submit" name="Buscar" value="Buscar">
+                    </div>
+                </div>
+            </form>   
+            <div class="grid">
+                <div class="card card1">
+                    <img src="./img/almendros.jpg" alt="Casa Los Almendros"> 
+                    <div class="cardContainer">
+                        <h3><b>Los Almendros esq. Chacabuco. Barrio Manzanar</b></h3>                 
+                        <h4><b>170m2</b></h4>
+                        <h4><b>5 ambientes</b></h4>
+                        <h4><b>Precio USD 170.000</b></h4>
+                        <div>
+                            <input type="submit" name="Buscar" value="COORDINAR UNA VISITA" class="meInteresa">
+                        </div>
+                    </div>
+                </div>
+                <div class="card card2">
+                    <img src="./img/12sep.jpg" alt="Barrio 12 de septiembre" class=""> 
+                    <div class="cardContainer">
+                        <h3><b>Barrio 12 de septiembrer</b></h3>                 
+                        <h4><b>185m2</b></h4>
+                        <h4><b>5 ambientes</b></h4>
+                        <h4><b>Precio USD 220.000</b></h4>
+                    <div>
+                        <input type="submit" name="Buscar" value="COORDINAR UNA VISITA" class="meInteresa">
+                    </div>
+                    </div>
+                </div>    
+                <div class="card card3">
+                    <img src="./img/terrenohuechu.jpg" alt="Terreno" class=""> 
+                    <div class="cardContainer">
+                        <h3><b>Terreno</b></h3>                 
+                        <h4><b>1500m2</b></h4>
+                        <h4><b>-</b></h4>
+                        <h4><b>Precio USD 45.000</b></h4>
+                    <div>
+                        <input type="submit" name="Buscar" value="COORDINAR UNA VISITA" class="meInteresa">
+                    </div>
+                    </div>
+                </div>        
+                <div class="card card4">
+                    <img src="./img/lafalda.jpg" alt="Barrio La falda" class=""> 
+                    <div class="cardContainer">
+                        <h3><b>Barrio La Falda</b></h3>                 
+                        <h4><b>350m2</b></h4>
+                        <h4><b>5 ambientes</b></h4>
+                        <h4><b>Precio: USD 500.000</b></h4>
+                    <div>
+                        <input type="submit" name="Buscar" value="COORDINAR UNA VISITA" class="meInteresa">
+                    </div>
+                    </div>
+                </div>
+                <div class="card card5">
+                    <img src="./img/casaFlamingo.jpg" alt="Casa Flammingo" class=""> 
+                    <div class="cardContainer">
+                        <h3><b>Casa Barrio Flamingo</b></h3>                 
+                        <h4><b>115m2</b></h4>
+                        <h4><b>4 ambientes</b></h4>
+                        <h4><b>Precio USD 290.000</b></h4>
+                    <div>
+                        <input type="submit" name="Buscar" value="COORDINAR UNA VISITA" class="meInteresa">
+                    </div>
+                    </div>
+                </div>    
+                <div class="card card6">
+                    <img src="./img/DptoRoca.webp" alt="Dpto Calle Roca" class=""> 
+                    <div class="cardContainer">
+                        <h3><b>Dpto calle Roca</b></h3>                 
+                        <h4><b>45m2</b></h4>
+                        <h4><b>2 ambientes</b></h4>
+                        <h4><b> Precio USD 65.000</b></h4>
+                    <div>
+                        <input type="submit" name="Buscar" value="COORDINAR UNA VISITA" class="meInteresa">
+                    </div>
+                    </div>
+                </div>  
+                <div class="card card7">
+                    <img src="./img/Terreno industrial.jpg" alt="Terreno" class=""> 
+                    <div class="cardContainer">
+                        <h3><b>Terreno Industrial</b></h3>                 
+                        <h4><b>1200m2</b></h4>
+                        <h4><b>-</b></h4>
+                        <h4><b>Precio USD 77.000</b></h4>
+                    <div>
+                        <input type="submit" name="Buscar" value="COORDINAR UNA VISITA" class="meInteresa">
+                    </div>
+                    </div>
+                </div>
+                <div class="card card8">
+                    <img src="./img/Duplexjuan.webp" alt="Duplex" class=""> 
+                    <div class="cardContainer">
+                        <h3><b>Duplex Calle Juan XXIII</b></h3>                 
+                        <h4><b>75m2</b></h4>
+                        <h4><b>3 ambientes</b></h4>
+                        <h4><b>Precio USD 80.000</b></h4>
+                    <div>
+                        <input type="submit" name="Buscar" value="COORDINAR UNA VISITA" class="meInteresa">
+                    </div>
+                    </div>
+                </div>
+                <div class="card card9">
+                    <img src="./img/terrenoplatanos.jpg" alt="Terreno" class=""> 
+                    <div class="cardContainer">
+                        <h3><b>Terreno calle Los Platanos</b></h3>                 
+                        <h4><b>400m2</b></h4>
+                        <h4><b>-</b></h4>
+                        <h4><b>Precio USD 60.000</b></h4>
+                    <div>
+                        <input type="submit" name="Buscar" value="COORDINAR UNA VISITA" class="meInteresa">
+                    </div>
+                    </div>
+                </div>
+            </div>
+         <button class="cargarMasDiv">
+            <a href="" class="cargarMas"> Cargar Mas</a>
+         </button>   
+    </main>
+    <footer>
+        <div class="sanMartin">
+           <b>Encontranos en San Martin 105, Cipolletti, Río Negro</b>
+        </div>
+            <br>
+        <div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.319764368542!2d-68.00273428510425!3d-38.939522707062395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a310286ef3869%3A0x1f38c52af3746dc8!2sGral.%20San%20Mart%C3%ADn%20105%2C%20R8324%20Cipolletti%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses!2sar!4v1658844447167!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa1"></iframe>
+        </div>  
+            <br>
+        <div>    
+            <img src="./img/logowpp.jpg" alt="Logo Whatsapp" class="WppFix">
+        </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        <div class="derechos">
+            <b>Sol Inmobiliaria - Todos los derechos reservados.</b> 
+        </div>
+    </footer>
+</body>
+</html>
