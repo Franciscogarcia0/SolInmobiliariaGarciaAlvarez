@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=
     , initial-scale=1.0">
     <title>¿Queres vender?</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,30 +17,88 @@
 </head>
 <body>
     <header>
-        <img src="./img/Logosol2.png" alt="Logo SOL INMOBILIARIA">
+        <!-- En el header voy a poner el logo , y lo que seria la barra de navegacion-->
+        <img src="./img/Logosol2.png" alt="Logo SOL INMOBILIARIA" class="logoSol">
         <div class="logos">
                 <img src="./img/logomail2.png" alt="Logo Mail" class="logoMail">
                 <img src="./img/logoinsta2.jpg" alt="Logo Instagram" class="logoInsta">
                 <img src="./img/logoface2.png" alt="Logo Facebook" class="logoFace">
                 <img src="./img/logowpp.jpg" alt="Logo Whatsapp" class="logoWpp">
         </div>
-            <form action="#">
-                <input type="text" placeholder="¿Que estas buscando?" class="barraBuscar"> <input type="submit" value="Buscar" class="botonBuscar"> 
-            </form>
-    </header>
-    <main>
-            <div class="navegador"> 
-                    <ul>
-                        <a href="index.html">HOME</a>
-                        <a href="acercade.html">SOBRE NOSOTROS</a>
-                        <a href="alquileres.html">ALQUILAR</a>
-                        <a href="comprar.html">COMPRAR</a>
-                        <a href="ventas.html">VENDER</a>
-                    </ul>
-            </div>           
-            <h1>¿ESTAS INTERESADO EN VENDER?</h1>
-            <p> <b>A continuacion te dejamos un formulario para que completes con tus datos y nosotros te estaremos contactando lo antes posible para coordinar una visita.</b></p>
         <div>
+            <!-- NAVBAR CON BOOTSTRAP -->
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid navegadorPrincipal">
+                  <a class="navbar-brand" href="index.html">SOL INMOBILIARIA</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                        <a class="nav-link active" href="acercade.html">SOBRE NOSOTROS</a>
+                        <a class="nav-link active" href="alquileres.html">ALQUILER</a>
+                        <a class="nav-link active" href="comprar.html">COMPRAR</a>
+                        <a class="nav-link active" href="ventas.html">VENDER</a>
+                    </div>
+                    </div>
+                        <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
+                        <button class="btn btnNav" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>   
+              </nav>     
+        </div>
+    </header>   
+    <main>        
+            <h1>¿ESTAS INTERESADO EN VENDER?</h1>
+            <div class="contactar"><p><b>A continuacion te dejamos un formulario para que completes con tus datos y nosotros te estaremos contactando lo antes posible para coordinar una visita.</b></p>
+            </div>
+            <form class="row g-3 formVentas">
+                <div class="col-md-6">
+                  <label for="inputName" class="form-label">Nombre y Apellido</label>
+                  <input type="text" class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputnumber" class="form-label">Telefono</label>
+                  <input type="number" class="form-control" id="inputNumber">
+                </div>
+                <div class="col-12">
+                  <label for="inputEmail14" class="form-label">Correo electronico</label>
+                  <input type="email" class="form-control" id="inputEmail4" placeholder="">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Direccion</label>
+                  <input type="text" class="form-control" id="" placeholder="">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">Ciudad</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputState" class="form-label">Tipo de propiedad</label>
+                  <select id="inputState" class="form-select">
+                    <option selected>Tipo de propiedad</option>
+                    <option>Departamento</option>
+                    <option>Casa</option>
+                    <option>Terreno</option>
+                    <option>Local/Oficina</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                    <label for="floatingTextarea2">Comentarios </label>
+                    <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px; width: 50%;"></textarea>
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                    Acepto los términos y condiciones.
+                    </label>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn">Enviar</button>
+                </div>
+              </form>
+            <!-- <div>
         <form class="formVentas">
             <div>
                     <input type="text" placeholder="Nombre" class="nombre">
@@ -57,7 +116,7 @@
                 </div>
             </div>
         </form>
-        </div>
+        </div> -->
     </main>
     <footer>
         <div class="sanMartin">
@@ -73,5 +132,6 @@
             <b>Sol Inmobiliaria - Todos los derechos reservados.</b> 
         </div>
     </footer>
+<script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

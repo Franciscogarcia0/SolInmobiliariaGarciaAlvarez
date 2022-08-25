@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Propiedades en venta</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,8 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <img src="./img/Logosol2.png" alt="Logo SOL INMOBILIARIA">
+    <header>
+        <!-- En el header voy a poner el logo , y lo que seria la barra de navegacion-->
+        <img src="./img/Logosol2.png" alt="Logo SOL INMOBILIARIA" class="logoSol">
         <div class="logos">
                 <img src="./img/logomail2.png" alt="Logo Mail" class="logoMail">
                 <img src="./img/logoinsta2.jpg" alt="Logo Instagram" class="logoInsta">
@@ -23,66 +25,193 @@
                 <img src="./img/logowpp.jpg" alt="Logo Whatsapp" class="logoWpp">
         </div>
         <div>
-            <form action="#">
-                <input type="text" placeholder="¿Que estas buscando?" class="barraBuscar"> <input type="submit" value="Buscar" class="botonBuscar"> 
-            </form>
+            <!-- NAVBAR CON BOOTSTRAP -->
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid navegadorPrincipal">
+                  <a class="navbar-brand" href="index.html">SOL INMOBILIARIA</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                        <a class="nav-link active" href="acercade.html">SOBRE NOSOTROS</a>
+                        <a class="nav-link active" href="alquileres.html">ALQUILER</a>
+                        <a class="nav-link active" href="comprar.html">COMPRAR</a>
+                        <a class="nav-link active" href="ventas.html">VENDER</a>
+                    </div>
+                    </div>
+                        <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
+                        <button class="btn btnNav" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>   
+              </nav>     
         </div>
-            <div class="navegador"> 
-                    <ul>
-                        <a href="index.html">HOME</a>
-                        <a href="acercade.html">SOBRE NOSOTROS</a>
-                        <a href="alquileres.html">ALQUILAR</a>
-                        <a href="comprar.html">COMPRAR</a>
-                        <a href="ventas.html">VENDER</a>
-                    </ul>
-            </div>           
+    </header>   
+    <main>
             <h1>PROPIEDADES DISPONIBLES EN VENTA</h1>
-            <form>
-                <div class="buscInterno">
-                    <div>
-                        <label for="name">Tipo de operacion</label>
-                        <select>
-                            <option value="A"> Alquilar</option>
-                            <option value="C"> Comprar</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="name">Tipo de propiedad</label> 
-                        <select>
-                            <option value="C"> Casa</option>
-                            <option value="D"> Departamento</option>
-                            <option value="L"> Locales</option>
-                            <option value="T"> Terrenos</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="name">Localidad</label>
-                        <select>
-                            <option value="C"> Cipolletti</option>
-                            <option value="N"> Neuquen</option>
-                            <option value="FO"> Fernandez Oro</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="name">Cantidad de ambientes</label>
-                        <select>
-                            <option value="1"> 1</option>
-                            <option value="2"> 2</option>
-                            <option value="3"> 3</option>
-                            <option value="4"> 4</option>
-                            <option value="5"> 5</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="name">Rango de precio</label>
-                        <input type="range" min="10000" max="1000000">
-                    </div>
-                    <div>
-                        <input type="submit" name="Buscar" value="Buscar">
-                    </div>
+            <section class="buscInterno">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected> Tipo de operacion</option>
+                    <option value="1">Temporal</option>
+                    <option value="2">Contrato Largo</option>
+                </select>
+                <br>
+                <br>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Tipo de propiedad</option>
+                    <option value="1">Casa</option>
+                    <option value="2">Departamento</option>
+                    <option value="3">Locales</option>
+                    <option value="3">Terrenos</option>
+                </select> 
+                <br>
+                <br>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Localidad</option>
+                    <option value="1">Cipolletti</option>
+                    <option value="2">Neuquen</option>
+                    <option value="3">Fernandez Oro</option>
+                    <option value="3">Allen</option>
+                </select>   
+                <br>
+                <br>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Cantidad de ambientes</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="3">4</option>
+                    <option value="3">5</option>
+                </select> 
+                <br>
+                <br>
+                <div>
+                    <label for="customRange3" class="form-label">Rango de precio</label>
+                    <input type="range" class="form-range" min="10000" max="1000000">
                 </div>
-            </form>   
-            <div class="grid">
+                <div>
+                    <button type="button" class="btn">Buscar</button>
+                </div>
+            </section>
+             <!-- ARMAMOS LA GALERIA DE PROPIEDADES CON BOOTRSTRAP + CARDS -->
+             <div class="container text-center">
+                <div class="row align-items-start">
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/casamanza.jpg" class="card-img-top imgAlquiler" alt="Casa Manzanar">
+                        <div class="card-body">
+                          <h2 class="card-title"><b>Los Alerces. Barrio Manzanar</b></h2>
+                          <p class="card-text">150m2</p>
+                          <p class="card-text">4 ambientes</p>
+                          <p class="card-text"><b>Precio $250.000</b></p>
+                          <a href="#" class="btn ">Me interesa</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/centrocipo.jpg" class="card-img-top" alt="Centro Cipo">
+                        <div class="card-body">
+                          <h2 class="card-title"><b>Barrio Rodolfo Walsh</b></h2>
+                          <p class="card-text">120m2 </p>
+                          <p class="card-text">3 ambientes </p>
+                          <p class="card-text"><b>Precio $175.000</b></p>
+                          <a href="#" class="btn ">Me interesa</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/septiembre.jpg" class="card-img-top" alt="Casa Septiembre">
+                        <div class="card-body">
+                          <h2 class="card-title"><b>Barrio 12 de septiembre</b></h2>
+                          <p class="card-text">80m2</p>
+                          <p class="card-text">Duplex 3 ambientes</p>
+                          <p class="card-text"><b>Precio $75.000</b></p>
+                          <a href="#" class="btn ">Me interesa</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="container text-center">
+                    <div class="row align-items-start">
+                      <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/losCipreces.jpg" class="card-img-top" alt="Casa Cipreces">
+                            <div class="card-body">
+                              <h2 class="card-title"><b>Los Cipreces. Barrio Manzanar</b></h2>
+                              <p class="card-text">700m2</p>
+                              <p class="card-text">5 ambientes</p>
+                              <p class="card-text"><b>Precio $260.000</b></p>
+                              <a href="#" class="btn ">Me interesa</a>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/oficina.jpg" class="card-img-top" alt="Oficina">
+                            <div class="card-body">
+                              <h2 class="card-title"><b>Amplia casa para oficina</b></h2>
+                              <p class="card-text">180m2</p>
+                              <p class="card-text">5 ambientes</p>
+                              <p class="card-text"><b>Precio $145.000</b></p>
+                              <a href="#" class="btn ">Me interesa</a>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/galpon.webp" class="card-img-top" alt="Galpon">
+                            <div class="card-body">
+                              <h2 class="card-title"><b>Galpon Industrial</b></h2>
+                              <p class="card-text">1000m2</p>
+                              <p class="card-text">5 posiciones previstas</p>
+                              <p class="card-text"><b>Precio $380.000</b></p>
+                              <a href="#" class="btn ">Me interesa</a>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="container text-center">
+                        <div class="row align-items-start">
+                          <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/Peru100.jpg" class="card-img-top" alt="Peru al 100">
+                                <div class="card-body">
+                                  <h2 class="card-title"><b>Departamento Peru al 100</b></h2>
+                                  <p class="card-text">1000m2</p>
+                                  <p class="card-text">5-6 posiciones</p>
+                                  <p class="card-text">b>Precio $600.000</b></p>
+                                  <a href="#" class="btn ">Me interesa</a>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/bodega-galpon.jpg" class="card-img-top" alt="Bodega-galpon">
+                                <div class="card-body">
+                                  <H2 class="card-title"><b>Bodega - Galpon industrial</b></H2>
+                                  <p class="card-text">150m2</p>
+                                  <p class="card-text">4 ambientes</p>
+                                  <p class="card-text"><b>Precio $250.000</b></p>
+                                  <a href="#" class="btn ">Me interesa</a>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/laalameda.jpg" class="card-img-top" alt="Barrio La Alameda">
+                                <div class="card-body">
+                                  <h2 class="card-title"><b>Barrio La Alamed</b></h2>
+                                  <p class="card-text">165m2</p>
+                                  <p class="card-text">4 ambientes</p>
+                                  <p class="card-text"><b>Precio $160.000</b></p>
+                                  <a href="#" class="btn ">Me interesa</a>
+                                </div>
+                              </div>
+                          </div>
+            <!-- <div class="grid">
                 <div class="card card1">
                     <img src="./img/almendros.jpg" alt="Casa Los Almendros"> 
                     <div class="cardContainer">
@@ -191,7 +320,7 @@
                     </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
          <button class="cargarMasDiv">
             <a href="" class="cargarMas"> Cargar Mas</a>
          </button>   
@@ -217,5 +346,6 @@
             <b>Sol Inmobiliaria - Todos los derechos reservados.</b> 
         </div>
     </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

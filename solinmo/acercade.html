@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre nosotros</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,62 +15,96 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <img src="./img/Logosol2.png" alt="Logo SOL INMOBILIARIA">
-            <div class="logos">
+    <header>
+        <!-- En el header voy a poner el logo , y lo que seria la barra de navegacion-->
+        <img src="./img/Logosol2.png" alt="Logo SOL INMOBILIARIA" class="logoSol">
+        <div class="logos">
                 <img src="./img/logomail2.png" alt="Logo Mail" class="logoMail">
                 <img src="./img/logoinsta2.jpg" alt="Logo Instagram" class="logoInsta">
                 <img src="./img/logoface2.png" alt="Logo Facebook" class="logoFace">
                 <img src="./img/logowpp.jpg" alt="Logo Whatsapp" class="logoWpp">
-            </div>
-        <section>
-            <form action="#">
-                <input type="text" placeholder="¿Que estas buscando?" class="barraBuscar"> <input type="submit" value="Buscar" class="botonBuscar"> 
-            </form>
-        </section>
-        <section>
-            <div class="navegador"> 
-                    <ul>
-                        <a href="index.html">HOME</a>
-                        <a href="acercade.html">SOBRE NOSOTROS</a>
-                        <a href="alquileres.html">ALQUILAR</a>
-                        <a href="comprar.html">COMPRAR</a>
-                        <a href="ventas.html">VENDER</a>
-                    </ul>
-            </div>           
-        </section>
-        <section>
+        </div>
+        <div>
+            <!-- NAVBAR CON BOOTSTRAP -->
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid navegadorPrincipal">
+                    <a class="navbar-brand" href="index.html">SOL INMOBILIARIA</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                        <a class="nav-link active" href="acercade.html">SOBRE NOSOTROS</a>
+                        <a class="nav-link active" href="alquileres.html">ALQUILER</a>
+                        <a class="nav-link active" href="comprar.html">COMPRAR</a>
+                        <a class="nav-link active" href="ventas.html">VENDER</a>
+                    </div>
+                    </div>
+                        <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="¿Que estas buscando?" aria-label="Search">
+                        <button class="btn btnNav" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>   
+              </nav>     
+        </div>
+    </header>   
+    <main>
             <h1>¿QUIÉNES SOMOS?</h1>
-        <div class="imagen">
-            <img src="./img/solinmmo2.jpg" alt="SEDE INMOBILIARIA" class="imgLocal">
-            <p class="descripcion1">Somos una empresa familiar que se encuentra en el mercado desde 1976 atendiendo las demandas y necesidades de los clientes. 
-            </p>
-            <p class="descripcion2">Nos dedicamos a desarrollar proyectos inmobiliarios que generen oportunidades de inversión y puedan agregar valor urbano y calidad de vida a los habitantes de nuestra región.
-            </p>
-        </div>    
-        </section>
-        <section>
-        <div class="imagen">
-            <img src="./img/cipolletti.jfif" alt="IMAGEN CIPOLLETTTI" class="imgCipo">
-            <ul class="caracteristicas">
-                <li>Trabajamos con herramientas de gestion y administracion eficientes.</li>
-                <li>Nos focalizamos principalmente en nuestros clientes.</li>
-                <li> Capacitaciones constantes.</li>
-                <li> Promovemos el desarrollo sostenible dentro de la región.</li>
-                <li> Actuamos con integridad, profesionalidad y lealtad.</li>
-            </ul>
+        <div class="banner">
+            <h2><b> SOL INMOBILIARIA </b></h2>
+            <h5><B> EN CIPOLLETTI DESDE 1976 </B></h5>
         </div>
-        </section>
-        <section>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        <div class="equipoTrabajo">
-            <h2>NUESTRO EQUIPO DE TRABAJO</h2>
+        <div class="gridInfo">
+            <div class="gridInfo1">
+                <p>Trabajamos con herramientas de gestion y administracion eficientes.</p>
+                <p>Nos focalizamos principalmente en nuestros clientes.</p>
+                <p>Capacitaciones constantes.</p>
+                <p>Promovemos el desarrollo sostenible dentro de la región.</p>
+                <p>Actuamos con integridad, profesionalidad y lealtad.</p>
+            </div>
+            <div class="gridInfo2">
+                <img src="./img/solinmmo2.jpg" alt="LOCAL INMO">
+            </div>
+
         </div>
-        <div class="equipoTrabajo1">
+        <div>
+                <h1>NUESTRO EQUIPO DE TRABAJO</h1>
+        </div>
+        <div class="container text-center">
+            <div class="row align-items-start">
+              <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/ricky.jpg" class="card-img-top" alt="Ricardo Garcia">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>Ricardo Garcia</b></h5>
+                      <p class="card-text">Encargado de Loteos y Tasaciones</p>
+                      <a href="#" class="btn ">Contactar</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/adriana.jpg" class="card-img-top" alt="Adriana Garcia">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>Adriana Garcia</b></h5>
+                      <p class="card-text">Encargada de Alquileres y Ventas. </p>
+                      <a href="#" class="btn ">Contactar</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="./img/marian.JPG" class="card-img-top" alt="Mariano Chehin">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>Mariano Chehin</b></h5>
+                      <p class="card-text">Encargado de la Administración. </p>
+                      <a href="#" class="btn ">Contactar</a>
+                    </div>
+                  </div>
+              </div>
+        <!-- <div class="equipoTrabajo1">
             <div class="ricky">
                 <img src="./img/ricky.jpg" alt="Ricardo Garcia">
                 <b>Ricardo Garcia - Encargado de loteos y tasaciones</b>
@@ -84,8 +119,8 @@
                 <img src="./img/marian.JPG" alt="Mariano Chehin">
                 <b>Mariano Chehin - Administración de alquileres</b>
             </div>  
-        </div>
-        </section>
+        </div> -->
+        
     </main>
     <footer>
         <div class="sanMartin">
@@ -108,5 +143,6 @@
              <b>Sol Inmobiliaria - Todos los derechos reservados.</b> 
          </div>
     </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
